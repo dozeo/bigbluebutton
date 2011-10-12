@@ -20,11 +20,12 @@
   $Id: $
 -->
 
-<dspub:MDIWindow 
+<doz:DOZWindow
 	xmlns:mx="http://www.adobe.com/2006/mxml" 
 	implements="org.bigbluebutton.common.IBbbModuleWindow"
 	xmlns:mate="http://mate.asfusion.com/"
 	xmlns:dspub="flexlib.mdi.containers.*"
+	xmlns:doz="com.dozeo.bbb.containers.*"
 	creationComplete="onCreationComplete()"
 	verticalScrollPolicy="off" horizontalScrollPolicy="off"
 	width="320" height="240"
@@ -283,7 +284,7 @@
 		]]>
 	</mx:Script>
 
-	<dspub:states>
+	<doz:states>
 	    <!--http://stackoverflow.com/questions/369120/why-does-mxstates-have-trouble-being-resolved-to-a-component-implementation-->
         <mx:State name="dispFullRegionControlBar">   
             <mx:AddChild>
@@ -303,9 +304,9 @@
 				</mx:ControlBar>
             </mx:AddChild>
         </mx:State>	
-	</dspub:states>
+	</doz:states>
 				
 	<mx:Image id="cursorImg" visible="false" source="@Embed('../../assets/images/cursor4.png')"/>
 	
 
-</dspub:MDIWindow>
+</doz:DOZWindow>

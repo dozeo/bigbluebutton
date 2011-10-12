@@ -20,9 +20,10 @@
   $Id: $
 -->
 
-<MDIWindow xmlns="flexlib.mdi.containers.*" 
+<doz:DOZWindow xmlns="flexlib.mdi.containers.*" 
 	       xmlns:mx="http://www.adobe.com/2006/mxml" 
 	       xmlns:chat="org.bigbluebutton.modules.chat.views.components.*"
+		   xmlns:doz="com.dozeo.bbb.containers.*"
 	       showCloseButton="false"
 	       implements="org.bigbluebutton.common.IBbbModuleWindow" 
 	       creationComplete="onCreationComplete()"
@@ -59,7 +60,7 @@
 				
 				var disp:Dispatcher = new Dispatcher();
 				disp.dispatchEvent(new TranscriptEvent(TranscriptEvent.LOAD_TRANSCRIPT));
-				
+				this.minimize();
 			}
 			
 			private function fullScreenHandler(evt:FullScreenEvent):void {
@@ -84,4 +85,4 @@
 	</mx:Script>
 	
 	<views:ChatView id="chatView"/>
-</MDIWindow>
+</doz:DOZWindow>

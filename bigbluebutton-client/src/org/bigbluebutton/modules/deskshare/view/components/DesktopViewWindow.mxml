@@ -20,8 +20,9 @@
   $Id: $
 -->
 
-<MDIWindow xmlns="flexlib.mdi.containers.*" 
-	xmlns:mx="http://www.adobe.com/2006/mxml" 
+<doz:DOZWindow xmlns="flexlib.mdi.containers.*" 
+	xmlns:mx="http://www.adobe.com/2006/mxml"
+	xmlns:doz="com.dozeo.bbb.containers.*"
 	width="600" height="400"
 	creationComplete="onCreationComplete()"
 	implements="org.bigbluebutton.common.IBbbModuleWindow"
@@ -315,4 +316,4 @@
 			height="90%" label="{btnActualSize.selected ? ResourceUtil.getInstance().getString('bbb.desktopView.fitToWindow') : ResourceUtil.getInstance().getString('bbb.desktopView.actualSize')}" 
 			toolTip="{ResourceUtil.getInstance().getString('bbb.desktopView.fitToWindow')}" />
 	</mx:ControlBar>
-</MDIWindow>
+</doz:DOZWindow>

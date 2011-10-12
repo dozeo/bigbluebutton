@@ -20,11 +20,14 @@
   $Id: $
 -->
 
-<MDIWindow xmlns="flexlib.mdi.containers.*" 
-	xmlns:mx="http://www.adobe.com/2006/mxml" 
+<doz:DOZWindow xmlns="flexlib.mdi.containers.*" 
+	xmlns:mx="http://www.adobe.com/2006/mxml"
+	xmlns:doz="com.dozeo.bbb.containers.*"
+	xmlns:mate="http://mate.asfusion.com/"
 	creationComplete="init()" 
+	dropShadowEnabled= "false"
 	implements="org.bigbluebutton.common.IBbbModuleWindow"
-	resizable="true" xmlns:mate="http://mate.asfusion.com/">
+	resizable="true">
 	
 	<mx:Script>
 		<![CDATA[
@@ -101,6 +104,7 @@
 			
 			private function setVideoResolution(stream:String):void{
 				var resString:String = stream.substr(0, 7);
+				trace(resString);
 				switch(resString){
 					case "320x240":
 						this.width = 320;
@@ -188,11 +192,10 @@
 				// make sure the video has a correct aspectratio to avoid tall or flat faces
 				video.height  = Math.floor (video.width / _nAspectRatio);
 				this.height = video.height + 29;
-				
 			}
 			
 		]]>
 	</mx:Script>
 	
 	<mate:Listener type="{CloseAllWindowsEvent.CLOSE_ALL_WINDOWS}" method="closeWindow" />
-</MDIWindow>
+</doz:DOZWindow>

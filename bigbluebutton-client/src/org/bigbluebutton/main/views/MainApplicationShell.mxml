@@ -233,13 +233,19 @@
 			}
 			
 		]]>
-	</mx:Script>
-			
-	<views:MainToolbar id="toolbar" dock="true" width="100%" height="30" visible="false" verticalAlign="middle"/>
+	</mx:Script>	
+	<views:MainToolbar id="toolbar" styleName="headToolbar" dock="true" width="100%" height="73" visible="true" verticalAlign="middle">
+	</views:MainToolbar>
 	<views:MainCanvas id="mdiCanvas" horizontalScrollPolicy="off" verticalScrollPolicy="off" effectsLib="{flexlib.mdi.effects.effectsLib.MDIVistaEffects}" width="100%" height="100%">
 		<views:LoadingBar id="progressBar" x="{this.width/2 - progressBar.width/2}" y="{this.height/2 - progressBar.height/2}" width="{this.width/2}" />
-		<views:BrandingLogo x="{this.width - 300}" y="{this.height - 300}" />
-	</views:MainCanvas>	
+		<!-- views:BrandingLogo x="{this.width - 20}" y="{this.height - 20}"  /> -->
+	</views:MainCanvas>
+	
+	<!--
+	<mx:filters>
+		<mx:DropShadowFilter distance="0" angle="0" color="#555555" blurX="10" blurY="10" />
+	</mx:filters>
+	-->
 	
 	<mx:ControlBar width="100%" height="20" paddingTop="0">		
 	  	<mx:Label text="{ResourceUtil.getInstance().getString('bbb.mainshell.copyrightLabel2',[appVersion])}" id="copyrightLabel2"/>

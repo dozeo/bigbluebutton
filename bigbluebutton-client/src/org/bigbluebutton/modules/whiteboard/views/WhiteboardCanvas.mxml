@@ -127,7 +127,7 @@
 				x1 = this.mouseX;
 				y1 = this.mouseY;
 				startShape(x1, y1);
-				drawTimer = new Timer(1000, 0);
+				drawTimer = new Timer(22, 0);
 				drawTimer.addEventListener(TimerEvent.TIMER, onDrawTimer);
 				drawTimer.start();
 			}

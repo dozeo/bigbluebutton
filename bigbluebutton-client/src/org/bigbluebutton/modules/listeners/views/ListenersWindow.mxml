@@ -20,8 +20,9 @@
   $Id: $
 -->
 
-<MDIWindow xmlns:mx="http://www.adobe.com/2006/mxml" 
+<doz:DOZWindow xmlns:mx="http://www.adobe.com/2006/mxml" 
 			xmlns="flexlib.mdi.containers.*"
+			xmlns:doz="com.dozeo.bbb.containers.*"
 			implements="org.bigbluebutton.common.IBbbModuleWindow"
 			title="{windowTitle}"
 			creationComplete="onCreationComplete()" xmlns:mate="http://mate.asfusion.com/">
@@ -63,7 +64,8 @@
 			
 			
 			private function onCreationComplete():void {
-				BindingUtils.bindSetter(updateNumberOfListeners, listeners, "length");				
+				this.minimize();
+				BindingUtils.bindSetter(updateNumberOfListeners, listeners, "length");
 			}
 			
 			private function updateNumberOfListeners(numListeners:int):void {
@@ -169,4 +171,4 @@
      	   <mx:Spacer width="100%"/>
     	</mx:ControlBar>
 
-</MDIWindow>
+</doz:DOZWindow>
